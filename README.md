@@ -35,7 +35,7 @@ using fig for [Docker] orchestration
   --
       },
       "Volumes": {
-          "/data": "/var/lib/docker/vfs/dir/677a455587d3223b436dd380a6772294b9fe4ee64a809046f967c886bca407ad"
+          "/data": "/var/lib/docker/vfs/dir/677a...ad"
       },
       "VolumesRW": {
           "/data": true
