@@ -1,8 +1,8 @@
 web:
     build: .
-    command: uwsgi --http 0.0.0.0:8080 -w app
+    command: uwsgi --http 0.0.0.0:8080 -w app:app
     ports:
-        - "8080:9900"
+        - "9900:8080"
     links:
         - redis
 redis:

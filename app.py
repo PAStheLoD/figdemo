@@ -4,13 +4,13 @@
 from flask import Flask
 from redis import Redis
 
-app = Flask("hello")
+app = Flask(__name__)
 redis = Redis(host="redis_1", port=6379)
 
 @app.route("/")
 def hi():
-   redis.incr("hits")
-   return "hola!"
+   hit = redis.incr("hits")
+   return "hola! you're #{}".format(hit)
 
 if __name__ == '__main__':
     print("use uWSGI")
